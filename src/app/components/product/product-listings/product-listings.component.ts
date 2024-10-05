@@ -12,9 +12,9 @@ import { products } from '../../../data/products';
   styleUrl: './product-listings.component.scss',
 })
 export class ProductListComponent {
-  public products: any[] = products;
+  public products: any[] = [];
 
-  constructor() {
-    console.log(products);
+  ngOnInit() {
+    this.products = products;
   }
 }
