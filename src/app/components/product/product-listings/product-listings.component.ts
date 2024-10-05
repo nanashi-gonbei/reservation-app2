@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { products } from '../../../data/products';
+
 @Component({
   selector: 'list',
   standalone: true,
@@ -10,18 +12,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './product-listings.component.scss',
 })
 export class ProductListComponent {
-  public products: any[] = [
-    {
-      imageUrl: 'images/placeholder.jpg',
-    },
-    {
-      imageUrl: 'images/placeholder.jpg',
-    },
-    {
-      imageUrl: 'images/placeholder.jpg',
-    },
-    {
-      imageUrl: 'images/placeholder.jpg',
-    },
-  ];
+  public products: any[] = products;
+
+  constructor() {
+    console.log(products);
+  }
 }
